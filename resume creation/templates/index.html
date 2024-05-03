@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Resume Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 600px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            text-align: center;
+        }
+        form {
+            margin-top: 20px;
+        }
+        label {
+            font-weight: bold;
+        }
+        input[type="text"],
+        textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            float: right;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+        .hidden-label {
+            display: none;
+        }
+    </style>
+    <script>
+        function hideLabels() {
+            var labels = document.querySelectorAll('label');
+            labels.forEach(function(label) {
+                label.classList.add('hidden-label');
+            });
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h2>Resume Form</h2>
+        <form method="post" onsubmit="hideLabels()">
+            <label>Contact Information:</label><br>
+            <input type="text" name="contact_info" required><br>
+
+            <label>Objective (optional):</label><br>
+            <input type="text" name="objective"><br>
+
+            <label>Work Experience:</label><br>
+            <textarea name="work_experience" rows="4" required></textarea><br>
+
+            <label>Education:</label><br>
+            <textarea name="education" rows="4" required></textarea><br>
+
+            <label>Skills:</label><br>
+            <textarea name="skills" rows="4" required></textarea><br>
+
+            <label>Certifications:</label><br>
+            <textarea name="certifications" rows="4"></textarea><br>
+
+            <label>Awards and Honors:</label><br>
+            <textarea name="awards" rows="4"></textarea><br>
+
+            <label>Publications:</label><br>
+            <textarea name="publications" rows="4"></textarea><br>
+
+            <label>Volunteer Experience:</label><br>
+            <textarea name="volunteer_experience" rows="4"></textarea><br>
+
+            <label>Professional Memberships:</label><br>
+            <textarea name="memberships" rows="4"></textarea><br>
+
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+</body>
+</html>
